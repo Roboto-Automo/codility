@@ -42,6 +42,7 @@ gap = 0
 return maxGap;
 }
 
+//counting the number of asterisks in a string 
 
 function CountingAsterisksGap(input){
 
