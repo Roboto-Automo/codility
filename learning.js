@@ -41,3 +41,29 @@ gap = 0
 }
 return maxGap;
 }
+
+
+function CountingAsterisksGap(input){
+
+let count = 0
+let maxCount = 0
+let start = false
+
+for (let i = 0; i < input.length; i++){
+    if (input[i] === '*'){
+        start = true
+        count++
+        if (start === true && count > maxCount){
+            maxCount = count
+        }
+        
+    }else if (input[i] !== '*'){
+        start = false
+        count = 0
+    }
+}
+
+return console.log(maxCount);
+}
+
+CountingAsterisksGap("1*****1**1***t******T")
