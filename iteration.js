@@ -1,10 +1,11 @@
 //simple pyramid pattern
+let rows = 50;
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < rows; i++) {
   let line = "";
   let spaces = "";
 
-  for (let k = 0; k < 10 - i - 1; k++) {
+  for (let k = 0; k < rows - i - 1; k++) {
     spaces += " ";
   }
   for (let j = 0; j <= i; j++) {
