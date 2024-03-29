@@ -15,15 +15,18 @@ function solution(A, K) {
 }
 
 //Finding the unpaired element in an array
+// SOLUTION 1
 
 function solution(A) {
   let unpaired = 0;
+
   for (let i = 0; i < A.length; i++) {
     unpaired ^= A[i];
   }
   return unpaired;
 }
 
+//SOLUTION 2
 function solution(A) {
   // Implement your solution here
 
@@ -48,3 +51,12 @@ function Filter(array) {
 }
 
 console.log(Filter([0, 2, 3, 3, 5, 1, 1, 8, 9, 9]));
+
+//things to remember!!!
+
+//array.pop() removes the last element in an array and returns it
+//array.push() adds an element to the end of an array
+//array.shift() removes the first element in an array and returns it
+//array.unshift() adds an element to the beginning of an array
+//array.slice() takes the arguments of the starting index and the ending index and returns a new array with the elements in between the two indexes - including the starting index and excluding the ending index
+//array.splice() takes the arguments of the starting index, the number of elements to remove, and the elements to add and returns a new array with the elements removed and the new elements added eg array.splice(2, 0, "a", "b") will add "a" and "b" to the array at index 2

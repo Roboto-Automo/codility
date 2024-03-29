@@ -35,7 +35,6 @@ function isAlphanumeric(str) {
       newArray.push(array[i])
   }
   
-  
   }
   
   if(newArray.length !== 0){
@@ -45,3 +44,6 @@ function isAlphanumeric(str) {
   }else {return longestLength}
   
   }
+
+  //things to remember
+  //when resetting variables in a loop, make sure to place them at the beginning of the loop
