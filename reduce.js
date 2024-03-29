@@ -21,4 +21,4 @@ const occurrenceCount = array.reduce((acc, current) => {
     return acc;
 }, {});
 
-console.log(occurrenceCount,"occurrenceCount");
+console.log(occurrenceCount,"occurrenceCount"); // Output: { apple: 2, banana: 2, orange: 1 }

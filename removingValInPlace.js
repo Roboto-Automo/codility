@@ -8,11 +8,10 @@ var removeElement = function(nums, val) {
 
        for (let i = nums.length-1; i >=0; i--) {
             if (nums[i] === val) {
-                nums.splice(i,1) //removes the element at index i
+                nums.splice(i,1,"insertion") //removes the element at index i
             }else {
                 k++
             }
-           
         }
        
      console.log(k);
@@ -24,3 +23,4 @@ console.log(removeElement([3,2,2,3,7,5],3))
 //THINGS TO REMEMBER
 
 //count backwards when removing elements in place from an array
+
