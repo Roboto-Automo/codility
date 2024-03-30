@@ -55,7 +55,7 @@ return newArray[i] + 1;
 
 
 // Detected time complexity:O(N) or O(N * log(N)) linear time complexity as the loop will run N times where N is the length of the array
-function solution(A) {
+function solution2(A) {
  
      const N = A.length;
     let totalSum = (N + 1) * (N + 2) / 2;
@@ -64,3 +64,39 @@ function solution(A) {
 }
 
 console.log(solution2([0, 1, 3, 5, 6, 7])); 
+
+//Tape splitting problem Detected time complexity:Detected time complexity: )O(N) linear time complexity as the loop will run N times where N is the length of the array
+
+function solutionTape(A) {
+    // Implement your solution here
+  
+    const N = A.length;
+    
+    // Calculate total sum
+    let totalSum = A.reduce((acc, val) => acc + val, 0);
+    
+    let leftSum = A[0];
+    let rightSum = totalSum - leftSum;
+    let minDiff = Math.abs(leftSum - rightSum);
+    
+    for (let i = 1; i < N - 1; i++) {
+        leftSum += A[i];
+        rightSum -= A[i];
+        let diff = Math.abs(leftSum - rightSum);
+        minDiff = Math.min(minDiff, diff);
+    }
+    
+    return minDiff;
+}
+
+//THINGS TO REMEMBER 
+//math.min and math.max can be used to find the minimum and maximum values in an array
+//math.ceil can be used to round up a number to the nearest whole number
+//math.floor can be used to round down a number to the nearest whole number
+//math.round can be used to round a number to the nearest whole number
+//math.abs can be used to find difference between two values when subtracting the smaller value from the bigger 
+console.log(4-9);// outputs -5
+console.log(Math.abs(4-9));// outputs 5value and the answer is negative but the difference is positive  
+
+//reduce can be used to sum all the values in an array
+
