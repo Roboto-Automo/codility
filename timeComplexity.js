@@ -2,7 +2,7 @@
 
 //quick solution Detected time complexity:O(1) this is constant time complexity as the same calculation is done each time regardless of the distance
 
-function solution(X, Y, D) {
+function solutionfrog1(X, Y, D) {
     // Implement your solution here
 
 let distance = Y - X;
@@ -18,7 +18,7 @@ return count;
 //slow solution Detected time complexity:O(Y-X) linear time compexity dependent on the distance
 //the greater the number the longer the while loop will need to run
 
-function solution(X, Y, D) {
+function solutionfrog2(X, Y, D) {
     // Implement your solution here
 
 let distance = Y - X;
@@ -33,3 +33,34 @@ while(distanceJumped < distance){
 return count;
 
 }
+
+
+
+
+function solution(A) {
+    // Implement your solution here
+
+let newArray = [];
+
+newArray = A.sort((a, b) => a - b);
+
+for(let i = 0; i < newArray.length; i++){
+if(newArray[i] + 1 !== newArray[i+1])
+return newArray[i] + 1;
+
+}
+
+}
+
+
+
+// Detected time complexity:O(N) or O(N * log(N)) linear time complexity as the loop will run N times where N is the length of the array
+function solution(A) {
+ 
+     const N = A.length;
+    let totalSum = (N + 1) * (N + 2) / 2;
+    let arraySum = A.reduce((acc, val) => acc + val, 0);
+    return totalSum - arraySum;
+}
+
+console.log(solution2([0, 1, 3, 5, 6, 7])); 
