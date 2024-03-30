@@ -7,7 +7,8 @@ function isAlphanumeric(str) {
   }
   
   function longestStringElement(array) {
-      return array.reduce((longest, current) => current.length > longest.length ? current : longest, "");
+      return array.reduce((longest, current) => 
+      current.length > longest.length ? current : longest, "");
   }
   
   function solution(S) {
